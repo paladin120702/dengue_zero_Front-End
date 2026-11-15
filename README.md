@@ -2,6 +2,33 @@
 
 Aplicativo móvel desenvolvido em Flutter para o registro e acompanhamento de denúncias de possíveis focos de dengue. O usuário pode reportar um foco informando título, foto e localização no mapa, além de visualizar suas próprias denúncias.
 
+
+## O que este projeto demonstra
+
+Projeto móvel de estudo/portfólio relevante para **Desenvolvimento Júnior** e **Suporte de Sistemas Júnior**:
+
+- **Desenvolvimento:** Flutter/Dart, organização MVVM com Provider e integração com API REST.
+- **Integrações:** login Google/Firebase, envio de imagem ao Storage e seleção de localização no mapa.
+- **Análise de sistemas:** acompanhamento do fluxo login → imagem/localização → cadastro → consulta das denúncias.
+- **Documentação e orientação de uso:** pré-requisitos e verificações por etapa para distinguir permissão do dispositivo, serviço externo e resposta da API.
+
+Evidências: [`repositories`](lib/models/repositories), [`services`](lib/models/services), [`new_complaint`](lib/ui/new_complaint) e [`my_complaints`](lib/ui/my_complaints).
+
+## Diagnóstico no ambiente local
+
+| Sintoma | Conferência sugerida |
+|---|---|
+| Import de configuração não encontrado | Conferir `lib/firebase_options.dart` e `lib/utils/app_config.dart`, referenciados pelo código e não incluídos neste repositório. |
+| Login Google não conclui | Conferir a configuração Firebase/Google da plataforma e se o provedor está habilitado no projeto de desenvolvimento. |
+| Câmera ou localização indisponível | Conferir permissões do dispositivo e as configurações da plataforma. |
+| Imagem não é enviada | Conferir conectividade, projeto/bucket e regras de acesso do Firebase Storage. |
+| API retorna `401` | Conferir a sessão e o ID token; validar a configuração do backend correspondente. |
+| App não alcança o backend | Conferir a URL em `AppConfig` e o endereço acessível pelo emulador ou dispositivo. |
+
+A configuração de `AppConfig` deve expor os nomes usados no código (`AppConfig.` nos repositories); utilizar o endereço do próprio ambiente. Não publicar chaves privadas, tokens ou dados de usuários para demonstrar uma ocorrência.
+
+Para uma validação manual, usar conta de teste, cadastrar uma denúncia fictícia e verificar sua exibição em “Minhas denúncias”. Registrar em qual etapa ocorreu o erro antes de alterar configurações.
+
 ## Funcionalidades
 
 - Autenticação de usuários via Firebase Auth e login com conta Google
