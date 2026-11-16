@@ -5,7 +5,7 @@ Aplicativo móvel desenvolvido em Flutter para o registro e acompanhamento de de
 
 ## O que este projeto demonstra
 
-Projeto móvel de estudo/portfólio relevante para **Desenvolvimento Júnior** e **Suporte de Sistemas Júnior**:
+Projeto móvel de estudo/portfólio relevante para **Desenvolvimento Fullstack** e **Suporte de Sistemas Júnior**:
 
 - **Desenvolvimento:** Flutter/Dart, organização MVVM com Provider e integração com API REST.
 - **Integrações:** login Google/Firebase, envio de imagem ao Storage e seleção de localização no mapa.
